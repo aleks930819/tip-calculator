@@ -13,6 +13,8 @@ Frontend Mentor Tip calculator app challenge
 
 ### The challenge
 
+Link: https://www.frontendmentor.io/challenges/tip-calculator-app-ugJNGbJUX
+
 Users should be able to:
 
 - View the optimal layout for the app depending on their device's screen size

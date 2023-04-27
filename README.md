@@ -7,7 +7,7 @@ Frontend Mentor Tip calculator app challenge
 - [Overview](#overview)
   - [The challenge](#the-challenge)
   - [Screenshot](#screenshot)
-  - [Links](#links)
+  - [Link](#link)
 
 ## Overview
 
@@ -21,6 +21,9 @@ Users should be able to:
 
 ### Screenshot
 
-### Links
+![tip-calculator](https://user-images.githubusercontent.com/107752460/234868834-833d066c-d9a8-41d1-9364-9d4456a27c8d.jpg)
+
+
+### Link
 
 https://genuine-hummingbird-73fb26.netlify.app/

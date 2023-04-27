@@ -6,7 +6,7 @@ type ButtonProps = {
 };
 
 const Button: FC<ButtonProps> = ({ value }): ReactElement => {
-  return <button>{value}$</button>;
+  return <button>{value}%</button>;
 };
 
 const tipsChoices = [

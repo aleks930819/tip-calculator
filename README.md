@@ -17,7 +17,7 @@ To solve the challange i'm using React and styled components. I'm using useReduc
 
 ### The challenge
 
-Link: https://www.frontendmentor.io/challenges/tip-calculator-app-ugJNGbJUX
+https://www.frontendmentor.io/challenges/tip-calculator-app-ugJNGbJUX
 
 Users should be able to:
 

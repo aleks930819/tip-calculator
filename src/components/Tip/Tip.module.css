@@ -62,3 +62,11 @@
 .tips_container input:focus {
     outline: var(--strong-cyan) solid 0.2rem;
 }
+
+
+@media screen and (min-width: 1440px) {
+    .tips_container {
+        grid-template-columns: repeat(3, 100px);
+        grid-template-rows: repeat(2, 40px);
+    }
+}

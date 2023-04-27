@@ -3,10 +3,11 @@ import React, { FC, ReactElement } from 'react';
 
 type ButtonProps = {
   value: number;
+  handleClick: (value: number) => void;
 };
 
-const Button: FC<ButtonProps> = ({ value }): ReactElement => {
-  return <button>{value}%</button>;
+const Button: FC<ButtonProps> = ({ value, handleClick }): ReactElement => {
+  return <button onClick={() => handleClick(value)}>{value}%</button>;
 };
 
 const tipsChoices = [
@@ -27,15 +28,35 @@ const tipsChoices = [
   },
 ];
 
-const Tip: FC = (): ReactElement => {
+type TipProps = {
+  setTip: (value: number) => void;
+};
+
+const Tip: FC<TipProps> = ({ setTip }): ReactElement => {
+  const [customTip, setCustomTip] = React.useState<number>(0);
+
+  const handleClick = (value: number): void => {
+    setTip(value);
+  };
+
+  React.useEffect(() => {
+    if (customTip) {
+      setTip(customTip);
+    }
+  }, [customTip]);
+
   return (
     <div className={styles.tip_container}>
       <h3>Select Tip %</h3>
       <div className={styles.tips_container}>
         {tipsChoices.map((tip) => (
-          <Button key={tip.value} value={tip.value} />
+          <Button key={tip.value} value={tip.value} handleClick={handleClick} />
         ))}
-        <input type="number" placeholder="Custom" />
+        <input
+          type="number"
+          placeholder="Custom"
+          onChange={(e) => setCustomTip(Number(e.target.value))}
+        />
       </div>
     </div>
   );

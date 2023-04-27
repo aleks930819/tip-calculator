@@ -1,8 +1,13 @@
 import styles from './Result.module.css';
 
 import React, { FC, ReactElement } from 'react';
+import { ResultProps } from './types/types';
 
-const Result: FC = (): ReactElement => {
+const Result: FC<ResultProps> = ({
+  amountValue,
+  totalValue,
+  reset,
+}): ReactElement => {
   return (
     <div className={styles.result_container}>
       <div className={styles.tipAmount}>
@@ -11,7 +16,7 @@ const Result: FC = (): ReactElement => {
           <p>/ person</p>
         </div>
         <div>
-          <h2>$4.28</h2>
+          <h2>${amountValue}</h2>
         </div>
       </div>
       <div className={styles.total}>
@@ -20,11 +25,11 @@ const Result: FC = (): ReactElement => {
           <p>/ person</p>
         </div>
         <div>
-          <h2>$4.28</h2>
+          <h2>${totalValue}</h2>
         </div>
       </div>
       <div className={styles.button_container}>
-        <button>RESET</button>
+        <button onClick={() => reset()}>RESET</button>
       </div>
     </div>
   );

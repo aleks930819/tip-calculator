@@ -11,6 +11,10 @@ Frontend Mentor Tip calculator app challenge
 
 ## Overview
 
+This challenge was to build out a tip calculator app and get it looking as close to the design as possible.
+
+To solve the challange i'm using React and styled components. I'm using useReducer hook to manage the state of the app.
+
 ### The challenge
 
 Link: https://www.frontendmentor.io/challenges/tip-calculator-app-ugJNGbJUX

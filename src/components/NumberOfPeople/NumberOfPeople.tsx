@@ -1,16 +1,17 @@
-import styles from './NumberOfPeople.module.css';
-
 import React, { FC, ReactElement } from 'react';
 
-type NumberOfPeopleProps = {
-  setPeople: (value: number) => void;
-  people: number;
-};
+import styles from './NumberOfPeople.module.css';
 
-const NumberOfPeople: FC<NumberOfPeopleProps> = ({
+import { TNumberOfPeople } from './types/types';
+
+const NumberOfPeople: FC<TNumberOfPeople> = ({
   setPeople,
   people,
 }): ReactElement => {
+  const handleClick = (e: React.ChangeEvent<HTMLInputElement>) => {
+    setPeople(parseInt(e.target.value));
+  };
+
   return (
     <div className={styles.numberOfPeople_container}>
       <h3>Number of People</h3>
@@ -29,8 +30,7 @@ const NumberOfPeople: FC<NumberOfPeopleProps> = ({
         <input
           type="number"
           placeholder="0"
-          value={people}
-          onChange={(e) => setPeople(Number(e.target.value))}
+          onChange={handleClick}
         />
       </div>
     </div>

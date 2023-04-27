@@ -1,5 +1,6 @@
-import styles from './Heading.module.css';
 import React, { FC, ReactElement } from 'react';
+
+import styles from './Heading.module.css';
 
 const Heading: FC = (): ReactElement => {
   return (

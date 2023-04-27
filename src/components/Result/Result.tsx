@@ -1,9 +1,10 @@
 import styles from './Result.module.css';
 
 import React, { FC, ReactElement } from 'react';
-import { ResultProps } from './types/types';
+import { TResult } from './types/types';
+import Button from '../UI/Button';
 
-const Result: FC<ResultProps> = ({
+const Result: FC<TResult> = ({
   amountValue,
   totalValue,
   reset,
@@ -29,7 +30,7 @@ const Result: FC<ResultProps> = ({
         </div>
       </div>
       <div className={styles.button_container}>
-        <button onClick={() => reset()}>RESET</button>
+        <Button value="RESET" onClick={reset} />
       </div>
     </div>
   );

@@ -1,14 +1,7 @@
 import styles from './Tip.module.css';
 import React, { FC, ReactElement } from 'react';
-
-type ButtonProps = {
-  value: number;
-  handleClick: (value: number) => void;
-};
-
-const Button: FC<ButtonProps> = ({ value, handleClick }): ReactElement => {
-  return <button onClick={() => handleClick(value)}>{value}%</button>;
-};
+import { TTip } from './types/types';
+import Button from '../UI/Button';
 
 const tipsChoices = [
   {
@@ -28,11 +21,7 @@ const tipsChoices = [
   },
 ];
 
-type TipProps = {
-  setTip: (value: number) => void;
-};
-
-const Tip: FC<TipProps> = ({ setTip }): ReactElement => {
+const Tip: FC<TTip> = ({ setTip }): ReactElement => {
   const [customTip, setCustomTip] = React.useState<number>(0);
 
   const handleClick = (value: number): void => {
@@ -50,7 +39,11 @@ const Tip: FC<TipProps> = ({ setTip }): ReactElement => {
       <h3>Select Tip %</h3>
       <div className={styles.tips_container}>
         {tipsChoices.map((tip) => (
-          <Button key={tip.value} value={tip.value} handleClick={handleClick} />
+          <Button
+            key={tip.value}
+            value={`${tip.value}%`}
+            onClick={() => handleClick(tip.value)}
+          ></Button>
         ))}
         <input
           type="number"

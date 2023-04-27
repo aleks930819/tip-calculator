@@ -1,12 +1,17 @@
-import Bill from '../Bill/Bill';
-import NumberOfPeople from '../NumberOfPeople/NumberOfPeople';
-import Result from '../Result/Result';
-import Tip from '../Tip/Tip';
+import React, { FC, ReactElement } from 'react';
+
 import styles from './Container.module.css';
 
 import useTipCalculator from '../../hooks/useTipCalculatorReducer';
 
-import React, { FC, ReactElement } from 'react';
+import Bill from '../Bill/Bill';
+import NumberOfPeople from '../NumberOfPeople/NumberOfPeople';
+import Result from '../Result/Result';
+import Tip from '../Tip/Tip';
+
+
+
+
 
 const Container: FC = (): ReactElement => {
   const { state, setPeople, setBill, setTip, reset } = useTipCalculator();

@@ -1,12 +1,27 @@
 .container {
     background-color: var(--white);
-    flex: 1 1 100%;
+    display: grid;
     width: 100vw;
+    height: 100%;
     border-top-right-radius: 3.2rem;
     border-top-left-radius: 3.2rem;
-    justify-content: space-between;
     align-items: center;
     padding: 2rem 3rem;
-    display: flex;
-    flex-direction: column;
+    align-items: center;
+    margin-top: 2.2rem;
+    gap: 2rem;
+}
+
+@media screen and (min-width: 1440px) {
+    .container {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: 1fr;
+        gap: 5rem;
+        flex: 1 1 50%;
+        width: 50vw;
+        border-radius: 3.2rem;
+
+    }
+
 }

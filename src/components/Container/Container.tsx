@@ -9,10 +9,14 @@ import React, { FC, ReactElement } from 'react';
 const Container: FC = (): ReactElement => {
   return (
     <div className={styles.container}>
-      <Bill />
-      <Tip />
-      <NumberOfPeople />
-      <Result />
+      <div>
+        <Bill />
+        <Tip />
+        <NumberOfPeople />
+      </div>
+      <div className={styles.result_wrapper}>
+        <Result />
+      </div>
     </div>
   );
 };

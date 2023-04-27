@@ -1,5 +1,7 @@
 .numberOfPeople_container {
     width: 100%;
+    margin-top: 1.5rem;
+
 
 }
 
@@ -24,6 +26,7 @@
     margin-bottom: 1rem;
     color: var(--dark-grayish-cyan);
     text-align: end;
+    appearance: none;
 
 }
 

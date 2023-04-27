@@ -1,0 +1,44 @@
+.bill_container {
+    width: 100%;
+
+}
+
+.bill_input {
+    position: relative;
+}
+
+.bill_icon {
+    position: absolute;
+    top: 1.5rem;
+    left: 1.5rem;
+    cursor: pointer;
+}
+
+.bill_input input {
+    width: 100%;
+    height: 4rem;
+    border-radius: 0.2rem;
+    background-color: var(--light-grayish-cyan);
+    border: none;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--dark-grayish-cyan);
+    text-align: end;
+
+}
+
+.bill_input input::placeholder {
+    text-align: end;
+}
+
+.bill_input input:focus {
+    outline: var(--strong-cyan) solid 0.2rem;
+}
+
+
+.bill_container h3 {
+    color: var(--dark-grayish-cyan);
+    margin-bottom: .4rem;
+}

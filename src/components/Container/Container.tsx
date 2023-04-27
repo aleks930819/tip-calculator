@@ -9,10 +9,6 @@ import NumberOfPeople from '../NumberOfPeople/NumberOfPeople';
 import Result from '../Result/Result';
 import Tip from '../Tip/Tip';
 
-
-
-
-
 const Container: FC = (): ReactElement => {
   const { state, setPeople, setBill, setTip, reset } = useTipCalculator();
   const [amount, setAmount] = React.useState<string>('0.00');
